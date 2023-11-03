@@ -1554,7 +1554,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "extra":
         buttons = [[
-            InlineKeyboardButton(❰ ʙᴀᴄᴋ', callback_data='admin')
+            InlineKeyboardButton('❰ ʙᴀᴄᴋ', callback_data='admin')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
