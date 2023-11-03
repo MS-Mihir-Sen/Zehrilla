@@ -1644,21 +1644,37 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 parse_mode=enums.ParseMode.HTML
             )
     elif query.data == "tele":
-            btn = [[
+            buttons = [[
                     InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="help"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
                   ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.TELE_TXT),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=(script.TELE_TXT),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+)
     elif query.data == "ytdl":
         buttons = [[
             InlineKeyboardButton('❰ ʙᴀᴄᴋ', callback_data='help')
