@@ -1,16 +1,12 @@
 <p align="center">
-  <img src="https://graph.org/file/9456b1e97fb6c1e403792.jpg" alt="ROSE BUCKET Logo">
+  <img src="https://graph.org/file/a2f29b656ca3cbddbadb3.jpg" alt="MS_Movvies Owner Logo">
+</p>
 <h1 align="center">
- [ JISSHU-BOT ]
+  𝐌𝐒_𝐇𝐚𝐜𝐤𝐤𝐞𝐫
 </h1>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=𝑊𝑒𝑙𝑐𝑜𝑚𝑒+𝑇𝑜+VJ-Bot;𝐴+𝑠𝑖𝑚𝑝𝑙𝑒+𝑎𝑛𝑑+𝑝𝑜𝑤𝑒𝑟𝑓𝑢𝑙+𝐵𝑜𝑡!;𝐼𝑛𝑑𝑒𝑥𝑒𝑠+𝐹𝑖𝑙𝑒𝑠+𝑎𝑏𝑜𝑣𝑒+2𝐺𝐵;𝐴+𝐵𝑜𝑡+𝑤𝑖𝑡ℎ+𝑑𝑜𝑢𝑏𝑙𝑒+𝑏𝑢𝑡𝑡𝑜𝑛!;𝑆𝑡𝑎𝑟𝑡+𝑚𝑒𝑠𝑠𝑎𝑔𝑒+𝑤𝑖𝑡ℎ+𝑝𝑖𝑐!;𝐴𝑛𝑑+𝑚𝑜𝑟𝑒+𝑓𝑒𝑎𝑡𝑢𝑟𝑒𝑠!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=𝐌𝐒_𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐞;𝐀+𝐏𝐫𝐨𝐣𝐞𝐜𝐭+𝐁𝐲+𝐌𝐒;𝐌𝐨𝐬𝐭+𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝+𝐀𝐧𝐝;𝐎𝐧𝐞+𝐎𝐟+𝐓𝐡𝐞+𝐏𝐨𝐰𝐞𝐫𝐅𝐮𝐥𝐥+𝐁𝐨𝐭;𝐄𝐧𝐚𝐛𝐥𝐞𝐝+𝐕𝐞𝐫𝐢𝐟𝐲+𝐀𝐧𝐝;𝐀𝐥𝐥+𝐒𝐡𝐨𝐫𝐭𝐥𝐢𝐧𝐤;𝐈+𝐀𝐌+𝐏𝐫𝐞𝐞𝐭𝐲+𝐒𝐮𝐫𝐞+𝐘𝐨𝐮+𝐃𝐢𝐝𝐧'𝐭+𝐒𝐞𝐞𝐧;𝐁𝐨𝐭𝐬+𝐋𝐢𝐤𝐞+𝐓𝐡𝐢𝐬;𝐎𝐧+𝐖𝐡𝐨𝐥𝐞+𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐞;[+𝐄𝐱𝐜𝐞𝐩𝐭+𝐌𝐒_𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐞+])
 </p>
-
-* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/JISSHU_BOTS)
-* * [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/IM_JISSHU)
-
-[Note To A So Called Dev](https://telegram.dog/JISSHU_BOTS): 
 ## 𝐹𝑒𝑎𝑡𝑢𝑟𝑒𝑠
  hai 
 - [x] Stram Feature Added With Many Player Support
