@@ -28,13 +28,11 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⇋ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⇋', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('🔍 Gʀᴏᴜᴘ', url="https://t.me/Ott_Movie_Request_Group"),
-                    InlineKeyboardButton('🎬 channel', url='https://t.me/S_Hindi_Movie')
-                ],[
-                    InlineKeyboardButton('🎉 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🎉', url=CHNL_LNK)
-                  ]]
+                    InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', url="https://t.me/Ott_Movie_Request_Group"),
+                    InlineKeyboardButton('📷 ʀᴜʟᴇs 🌟', url='https://t.me/S_Hindi_Movie')
+                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
@@ -48,15 +46,15 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⇋ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⇋', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('movie audio 💋', callback_data="shortlink_info"),
-                    InlineKeyboardButton('🔍 Gʀᴏᴜᴘ', url='https://t.me/Ott_Movie_Request_Group')
+                    InlineKeyboardButton('✦ ᴏᴡɴᴇʀ ✦', callback_data='owner_hun'),
+                    InlineKeyboardButton('🌿 ꜱᴜᴘᴘᴏʀᴛ', callback_data='oye_support')
                 ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton('💠 ʜᴇʟᴘ 💠', callback_data='help'),
+                    InlineKeyboardButton('✦ ᴀʙᴏᴜᴛ ✦', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🎉 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🎉', url=CHNL_LNK)
+                    InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data='shortlink_info')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
@@ -79,10 +77,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton("❆ Jᴏɪɴ Oᴜʀ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link)
-            ],[
-                InlineKeyboardButton('🤔 Why Iam Join🤔', callback_data='sinfo')
-            ]
-        ]
+            ]]
 
         if message.command[1] != "subscribe":
             try:
@@ -100,15 +95,15 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⇋ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⇋', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('movie audio 💋', callback_data="shortlink_info"),
-                    InlineKeyboardButton('🔍 Gʀᴏᴜᴘ', url=CHNL_LNK)
+                    InlineKeyboardButton('✦ ᴏᴡɴᴇʀ ✦', callback_data='owner_hun'),
+                    InlineKeyboardButton('🌿 ꜱᴜᴘᴘᴏʀᴛ', callback_data='oye_support')
                 ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton('💠 ʜᴇʟᴘ 💠', callback_data='help'),
+                    InlineKeyboardButton('✦ ᴀʙᴏᴜᴛ ✦', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🎉 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🎉', url=CHNL_LNK)
+                    InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data='shortlink_info')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -160,7 +155,10 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton('🚀 Fast Download /🎥 Watch Online', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr 
+                                InlineKeyboardButton('⭐ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 🚀', callback_data=f'generate_stream_link:{file_id}'),
+                                InlineKeyboardButton('🎥 ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ ⭐', callback_data=f'generate_stream_link:{file_id}')  #Don't change anything without contacting me @LazyDeveloperr 
+                            ],[
+                                InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇs 🎥', url='https://t.me/MS_Movvies')
                             ]
                         ]
                     )
@@ -176,7 +174,10 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                               InlineKeyboardButton('🚀 Fast Download /🎥 Watch Online', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+                               InlineKeyboardButton('⭐ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 🚀', callback_data=f'generate_stream_link:{file_id}'),
+                               InlineKeyboardButton('🎥 ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ ⭐', callback_data=f'generate_stream_link:{file_id}')  #Don't change anything without contacting me @LazyDeveloperr 
+                            ],[
+                               InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇs 🎥', url='https://t.me/MS_Movvies')
                             ]
                         ]
                     )
@@ -260,9 +261,9 @@ async def start(client, message):
         k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n📂 ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 5 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
+                        InlineKeyboardButton('📁 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📁', url=g)
                     ], [
-                        InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
+                        InlineKeyboardButton('🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
                     ]
                 ]
             )
@@ -281,9 +282,9 @@ async def start(client, message):
         k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
+                        InlineKeyboardButton('📁 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📁', url=g)
                     ], [
-                        InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
+                        InlineKeyboardButton('🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
                     ]
                 ]
             )
@@ -314,10 +315,11 @@ async def start(client, message):
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("✅ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                    InlineKeyboardButton("⁉️ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⁉️", url='https://t.me/+jg74vZvDiY9iNjA1')
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    text="<b>‼️ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴀʟᴇʀᴛ ‼️ \n\n🔥 ᴛᴏ ᴜɴʟᴏᴄᴋ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ꜰɪʟᴇꜱ ꜰᴏʀ ꜰᴇᴡ ʜᴏᴜʀꜱ ✅\n\n♨️ ᴠᴇʀɪꜰʏ ʏᴏᴜʀꜱᴇʟꜰ. 🚀</b>",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -330,14 +332,16 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🚀 Fast Download /🎥 Watch Online', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
-                      
+                      InlineKeyboardButton('⭐ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 🚀', callback_data=f'generate_stream_link:{file_id}'),
+                      InlineKeyboardButton('🎥 ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ ⭐', callback_data=f'generate_stream_link:{file_id}')  #Don't change anything without contacting me @LazyDeveloperr 
+                      ],[
+                      InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇs 🎥', url='https://t.me/MS_Movvies')
                      ]
                     ]
                 )
             )
             filesarr.append(msg)
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>ɴᴏᴛᴇ</u> :- ᴛʜɪs ᴍᴏᴠɪᴇ / ғɪʟᴇ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪɴ 10 ᴍɪɴᴜᴛᴇs sᴏ\n<i>ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀᴛ ᴏʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs</i>\n\n[ ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ᴡᴇ ᴅᴏɴᴇ ᴛʜɪs ]</b>")
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
@@ -358,9 +362,9 @@ async def start(client, message):
             k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
+                            InlineKeyboardButton('🤔 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🤔', url=g)
                         ], [
-                            InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
+                            InlineKeyboardButton('📁 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📁', url=await get_tutorial(chat_id))
                         ]
                     ]
                 )
@@ -375,10 +379,11 @@ async def start(client, message):
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("✅ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                    InlineKeyboardButton("⁉️ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⁉️", url='https://t.me/+jg74vZvDiY9iNjA1')
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    text="<b>‼️ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴀʟᴇʀᴛ ‼️ \n\n🔥 ᴛᴏ ᴜɴʟᴏᴄᴋ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ꜰɪʟᴇꜱ ꜰᴏʀ ꜰᴇᴡ ʜᴏᴜʀꜱ ✅\n\n♨️ ᴠᴇʀɪꜰʏ ʏᴏᴜʀꜱᴇʟꜰ. 🚀</b>",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -390,14 +395,17 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🚀 Fast Download /🎥 Watch Online', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+                      InlineKeyboardButton('⭐ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 🚀', callback_data=f'generate_stream_link:{file_id}'),
+                      InlineKeyboardButton('🎥 ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ ⭐', callback_data=f'generate_stream_link:{file_id}')  #Don't change anything without contacting me @LazyDeveloperr 
+                      ],[
+                      InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇs 🎥', url='https://t.me/MS_Movvies')
                      ]
                     ]
                 )
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '@Ott_Movie_Request_Group  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -409,7 +417,7 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply("<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",quote=True)
+            k = await msg.reply("<b><u>ɴᴏᴛᴇ</u> :- ᴛʜɪs ᴍᴏᴠɪᴇ / ғɪʟᴇ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪɴ 10 ᴍɪɴᴜᴛᴇs sᴏ\n<i>ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀᴛ ᴏʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs</i>\n\n[ ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ᴡᴇ ᴅᴏɴᴇ ᴛʜɪs ]</b>",quote=True)
             await asyncio.sleep(600)
             await msg.delete()
             await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
@@ -418,7 +426,7 @@ async def start(client, message):
             pass
         return await message.reply('No such file exist.')
     files = files_[0]
-    title = '@Ott_Movie_Request_Group  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+    title = ' ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
     if CUSTOM_FILE_CAPTION:
@@ -428,13 +436,14 @@ async def start(client, message):
             logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
-        f_caption = f"@movie_file_20  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+        f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
-            InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+            InlineKeyboardButton("✅ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+            InlineKeyboardButton("⁉️ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⁉️", url='https://t.me/+jg74vZvDiY9iNjA1')
         ]]
         await message.reply_text(
-            text="<b>You are not verified !\nKindly verify to continue !</b>",
+            text="<b>‼️ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴀʟᴇʀᴛ ‼️ \n\n🔥 ᴛᴏ ᴜɴʟᴏᴄᴋ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ꜰɪʟᴇꜱ ꜰᴏʀ ꜰᴇᴡ ʜᴏᴜʀꜱ ✅\n\n♨️ ᴠᴇʀɪꜰʏ ʏᴏᴜʀꜱᴇʟꜰ. 🚀</b>",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
@@ -447,7 +456,10 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('🚀 Fast Download /🎥 Watch Online', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+              InlineKeyboardButton('⭐ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 🚀', callback_data=f'generate_stream_link:{file_id}'),
+              InlineKeyboardButton('🎥 ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ ⭐', callback_data=f'generate_stream_link:{file_id}')  #Don't change anything without contacting me @LazyDeveloperr 
+              ],[
+              InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇs 🎥', url='https://t.me/MS_Movvies')
              ]
             ]
         )
@@ -455,7 +467,7 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",quote=True)
+    k = await msg.reply("<b><u>ɴᴏᴛᴇ</u> :- ᴛʜɪs ᴍᴏᴠɪᴇ / ғɪʟᴇ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪɴ 10 ᴍɪɴᴜᴛᴇs sᴏ\n<i>ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀᴛ ᴏʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs</i>\n\n[ ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ᴡᴇ ᴅᴏɴᴇ ᴛʜɪs ]</b>",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
