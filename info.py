@@ -1,7 +1,4 @@
-# Don't Remove Credit @movie_file_20
-# Subscribe YouTube Channel For Amazing Bot @movie_file_20
-# Ask Doubt on telegram @KingVJ01
-
+# MS_Hacker Zindabaad Zindabad @MS_Mihir On Telegram https://t.me/MS_Mihir
 
 import re
 from os import environ,getenv
