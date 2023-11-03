@@ -27,16 +27,16 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 PICS = (environ.get('PICS', 'https://graph.org/file/4c4e6c3e4c7348ce954b6.jpg https://graph.org/file/d0f97b1299f188ce7c42b.jpg https://graph.org/file/10666f11431b8869ee866.jpg https://graph.org/file/bc6c02c7f17cd7bd779fb.jpg https://graph.org/file/e5607f87fe2e741a8ece7.jpg')).split() #SAMPLE PIC
-NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/46443096bc6895c74a716.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
-SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
+NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/a27dc8fe434e6b846b0f8.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/8a567f3ad1905a75298cc.mp4")
+SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/2be2ef024a5bbf336b7d5.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5165943027').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6433510598').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001953586887').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6433510598').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '6433510598').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
@@ -54,20 +54,20 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Mdisk.pro')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'ee2e50b000e88ab6549ce6ade5313149a9851577')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'instantlinks.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'cdeb95e7f77a6bad1d379a4581029acb7a441136')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Ott_Movie_Request_Group')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/S_Hindi_Movie')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Ott_Movie_Request_Group/617')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+U3Y_jbbzAh0yZDk1')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/MS_Movvies')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/MS_Mihir/37')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
-MSG_ALRT = environ.get('MSG_ALRT', 'Hello My Dear Friends ❤️')
+MSG_ALRT = environ.get('MSG_ALRT', 'ᴡᴀɪᴛ ɪ ᴀᴍ ꜱʟɪɢʜᴛʟʏ ʙᴜꜱʏ')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001565949579'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'vj_bot_disscussion')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MS_Movvis')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
