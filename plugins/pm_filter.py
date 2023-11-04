@@ -1951,37 +1951,71 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
 )
     elif query.data == "share":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="help"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="help"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.SHARE_TXT),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SHARE_TXT,
+            reply_markup=reply_markup,
+            parse_mode=
+enums.ParseMode.HTML
+        )
     elif query.data == "song":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="help"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="help"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.SONG_TXT),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SONG_TXT,
+            reply_markup=reply_markup,
+            parse_mode=
+enums.ParseMode.HTML
+        )
     elif query.data == "json":
         buttons = [[
             InlineKeyboardButton('❰ ʙᴀᴄᴋ', callback_data='help')
@@ -2014,167 +2048,325 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
 )
     elif query.data == "sticker":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="help"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="help"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.STICKER_TXT),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.STICKER_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "tamil_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.TAMIL_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.TAMIL_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "english_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.ENGLISH_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
-    elif query.data == "hindi_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.HINDI_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.ENGLISH_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "telugu_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.TELUGU_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
-    elif query.data == "malayalam_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.TELUGU_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "hindi_info":
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.MALAYALAM_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.HINDI_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "malyalam_info":
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+                    InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.MALYALAM_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "urdu_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.URDU_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.URDU_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "bangladesh_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.BANGLADESH_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.BANGLADESH_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "kannada_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.KANNADA_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
-    elif query.data == "gujarati_info":
-            btn = [[
-                    InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.KANNADA_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "gujrati_info":
+        buttons = [[
+            InlineKeyboardButton("❰ ʙᴀᴄᴋ", callback_data="start"),
                     InlineKeyboardButton("📞 ᴄᴏɴᴛᴀᴄᴛ 🐍", url="https://t.me/MS_Contact_RoBot")
-                  ]]
-        
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-            )
-            reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.edit_text(
-                text=(script.GUJARATI_INFO),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="⬢ ⬡ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬡ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬡ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬡"
+        )
+        await query.message.edit_text(
+            text="⬢ ⬢ ⬢ ⬢ ⬢"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.GUJRATI_INFO,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
