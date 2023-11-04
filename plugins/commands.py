@@ -245,7 +245,7 @@ async def start(client, message):
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
             await message.reply_text(
-                text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
+                text=f"<b>ʜᴇʟʟᴏ {message.from_user.mention}, 💐 ʏᴏᴜ'ʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ 🌹\n\n✅ ᴠᴇʀɪꜰɪᴇᴅ ✅\n\n🔥 ᴇɴᴊᴏʏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴀ ᴡᴏʀʟᴅ ᴏꜰ ᴍᴏᴠɪᴇꜱ ꜰᴏʀ ᴛʜᴇ ɴᴇxᴛ ꜰᴇᴡ ʜᴏᴜʀꜱ. 🎬🍿</b>",
                 protect_content=True
             )
             await verify_user(client, userid, token)
