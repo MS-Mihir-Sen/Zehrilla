@@ -1407,13 +1407,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
              InlineKeyboardButton('▸ ʏᴛ-ᴅʟ ◂', callback_data='ytdl') 
          ], [ 
              InlineKeyboardButton('▸ ꜱʜᴀʀᴇ ᴛᴇxᴛ ◂', callback_data='share'), 
-             InlineKeyboardButton('▸ ꜱᴏɴɢ ◂', callback_data='song') 
+             InlineKeyboardButton('▸ ᴇᴀʀɴ ᴍᴏɴᴇʏ ◂', callback_data='shortlink_info')
          ], [
-             InlineKeyboardButton('▸ ᴇᴀʀɴ ᴍᴏɴᴇʏ ◂', callback_data='shortlink_info'),
+             InlineKeyboardButton('❰ ʙᴀᴄᴋ', callback_data='start'),
              InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ-ɪᴅ', callback_data='sticker'),
-             InlineKeyboardButton('▸ ᴊ-ꜱᴏɴ ◂', callback_data='json'),  
-         ], [             
-             InlineKeyboardButton('❰ ʙᴀᴄᴋ', callback_data='start')
+             InlineKeyboardButton('▸ ᴊ-ꜱᴏɴ ◂', callback_data='json')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
