@@ -2462,7 +2462,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
+            m=await message.reply_sticker("CAACAgUAAxkBAAERH8xlTKCd7M0asBHGlBMm1AdEZs1ZzQAC5wkAAkXiYVbMDDKZa_71ih4E")
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2491,7 +2491,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker("CAACAgIAAxkBAAIZ3mUhQaiQETw7p9xY473Lqn82uEXuAAJjAQACEBptImu6AmhfaYu5HgQ")
+        m=await message.reply_sticker("CAACAgUAAxkBAAERH8xlTKCd7M0asBHGlBMm1AdEZs1ZzQAC5wkAAkXiYVbMDDKZa_71ih4E")
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     pre = 'filep' if settings['file_secure'] else 'file'
@@ -2554,39 +2554,39 @@ async def auto_filter(client, msg, spoll=False):
     cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
     time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
     remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
-    TEMPLATE = script.IMDB_TEMPLATE_TXT
-    if imdb:
-        cap = TEMPLATE.format(
-            qurey=search,
-            title=imdb['title'],
-            votes=imdb['votes'],
-            aka=imdb["aka"],
-            seasons=imdb["seasons"],
-            box_office=imdb['box_office'],
-            localized_title=imdb['localized_title'],
-            kind=imdb['kind'],
-            imdb_id=imdb["imdb_id"],
-            cast=imdb["cast"],
-            runtime=imdb["runtime"],
-            countries=imdb["countries"],
-            certificates=imdb["certificates"],
-            languages=imdb["languages"],
-            director=imdb["director"],
-            writer=imdb["writer"],
-            producer=imdb["producer"],
-            composer=imdb["composer"],
-            cinematographer=imdb["cinematographer"],
-            music_team=imdb["music_team"],
-            distributors=imdb["distributors"],
-            release_date=imdb['release_date'],
-            year=imdb['year'],
-            genres=imdb['genres'],
-            poster=imdb['poster'],
-            plot=imdb['plot'],
-            rating=imdb['rating'],
-            url=imdb['url'],
-            **locals()
-        )
+    # TEMPLATE = script.IMDB_TEMPLATE_TXT
+    # if imdb:
+    #     cap = TEMPLATE.format(
+    #         query=search,
+    #         title=imdb['title'],
+    #         votes=imdb['votes'],
+    #         aka=imdb["aka"],
+    #         seasons=imdb["seasons"],
+    #         box_office=imdb['box_office'],
+    #         localized_title=imdb['localized_title'],
+    #         kind=imdb['kind'],
+    #         imdb_id=imdb["imdb_id"],
+    #         cast=imdb["cast"],
+    #         runtime=imdb["runtime"],
+    #         countries=imdb["countries"],
+    #         certificates=imdb["certificates"],
+    #         languages=imdb["languages"],
+    #         director=imdb["director"],
+    #         writer=imdb["writer"],
+    #         producer=imdb["producer"],
+    #         composer=imdb["composer"],
+    #         cinematographer=imdb["cinematographer"],
+    #         music_team=imdb["music_team"],
+    #         distributors=imdb["distributors"],
+    #         release_date=imdb['release_date'],
+    #         year=imdb['year'],
+    #         genres=imdb['genres'],
+    #         poster=imdb['poster'],
+    #         plot=imdb['plot'],
+    #         rating=imdb['rating'],
+    #         url=imdb['url'],
+    #         **locals()
+    #     )
         temp.IMDB_CAP[message.from_user.id] = cap
         if not settings["button"]:
             cap+="<b>\n\n<u>🍿 Your Movie Files 👇</u></b>\n"
@@ -2594,59 +2594,59 @@ async def auto_filter(client, msg, spoll=False):
                 cap += f"<b>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {message.from_user.mention}\n\nʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {message.chat.title} \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️\n\n</b>"
-        else:
+           # cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {message.from_user.mention}\n\nʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {message.chat.title} \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️\n\n</b>"
+ #       else:
             cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {message.from_user.mention}\n\nʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {message.chat.title} \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️\n\n</b>"
             cap+="<b><u>🍿 Your Movie Files 👇</u></b>\n\n"
             for file in files:
                 cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
-    if imdb and imdb.get('poster'):
-        try:
-            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await m.delete()
-            try:
-                if settings['auto_delete']:
-                    await asyncio.sleep(300)
-                    await hehe.delete()
-                    await message.delete()
-            except KeyError:
-                await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
-                await hehe.delete()
-                await message.delete()
-        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
-            pic = imdb.get('poster')
-            poster = pic.replace('.jpg', "._V1_UX360.jpg") 
-            hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await m.delete()
-            try:
-               if settings['auto_delete']:
-                    await asyncio.sleep(300)
-                    m=await message.reply_sticker("CAACAgIAAxkBAAIZ3mUhQaiQETw7p9xY473Lqn82uEXuAAJjAQACEBptImu6AmhfaYu5HgQ")
-                    await hmm.delete()
-                    await message.delete()
-            except KeyError:
-                await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
-                await hmm.delete()
-                await message.delete()
-        except Exception as e:
-            logger.exception(e)
-            m=await message.reply_sticker("CAACAgIAAxkBAAIZ3mUhQaiQETw7p9xY473Lqn82uEXuAAJjAQACEBptImu6AmhfaYu5HgQ") 
-            fek = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await m.delete()
-            try:
-                if settings['auto_delete']:
-                    await asyncio.sleep(300)
-                    await fek.delete()
-                    await message.delete()
-            except KeyError:
-                await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
-                await fek.delete()
-                await message.delete()
-    else:
+#    if imdb and imdb.get('poster'):
+#        try:
+#            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+#            await m.delete()
+#            try:
+#                if settings['auto_delete']:
+#                    await asyncio.sleep(300)
+#                    await hehe.delete()
+#                    await message.delete()
+#            except KeyError:
+#                await save_group_settings(message.chat.id, 'auto_delete', True)
+#                await asyncio.sleep(300)
+#                await hehe.delete()
+#                await message.delete()
+#        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+#            pic = imdb.get('poster')
+#            poster = pic.replace('.jpg', "._V1_UX360.jpg") 
+#            hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+#            await m.delete()
+#            try:
+#               if settings['auto_delete']:
+#                    await asyncio.sleep(300)
+#                    m=await message.reply_sticker("CAACAgUAAxkBAAERH8xlTKCd7M0asBHGlBMm1AdEZs1ZzQAC5wkAAkXiYVbMDDKZa_71ih4E")
+#                    await hmm.delete()
+#                    await message.delete()
+#            except KeyError:
+#                await save_group_settings(message.chat.id, 'auto_delete', True)
+#                await asyncio.sleep(300)
+#                await hmm.delete()
+#                await message.delete()
+#        except Exception as e:
+#            logger.exception(e)
+#            m=await message.reply_sticker("CAACAgUAAxkBAAERH8xlTKCd7M0asBHGlBMm1AdEZs1ZzQAC5wkAAkXiYVbMDDKZa_71ih4E") 
+#            fek = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
+#            await m.delete()
+#            try:
+#                if settings['auto_delete']:
+#                    await asyncio.sleep(300)
+#                    await fek.delete()
+#                    await message.delete()
+#            except KeyError:
+#                await save_group_settings(message.chat.id, 'auto_delete', True)
+#                await asyncio.sleep(300)
+#                await fek.delete()
+#                await message.delete()
+ #   else:
         fuk = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
         await m.delete()
         try:
