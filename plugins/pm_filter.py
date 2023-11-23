@@ -1409,9 +1409,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
              InlineKeyboardButton('▸ ꜱʜᴀʀᴇ ᴛᴇxᴛ ◂', callback_data='share'), 
              InlineKeyboardButton('▸ ᴇᴀʀɴ ᴍᴏɴᴇʏ ◂', callback_data='shortlink_info')
          ], [
-             InlineKeyboardButton('❰ ʙᴀᴄᴋ', callback_data='start'),
+             InlineKeyboardButton('▸ sᴛᴀᴛᴜs ◂', callback_data='stats'),
              InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ-ɪᴅ', callback_data='sticker'),
              InlineKeyboardButton('▸ ᴊ-ꜱᴏɴ ◂', callback_data='json')
+        ],[
+            InlineKeyboardButton('❰ ʙᴀᴄᴋ', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
