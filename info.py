@@ -89,6 +89,8 @@ LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin
 
 SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
 
+SEASONS = ["360p" , "480p" , "720p" , "1080p" , "2160p"]
+
 
                            # Don't Remove Credit @movie_file_20
                            # Subscribe YouTube Channel For Amazing Bot @movie_file_20
